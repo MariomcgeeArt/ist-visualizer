@@ -1,0 +1,17 @@
+<!-- templates/playlists_show.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/ists/{{ ist._id }}/edit">Edit ist Details</a>
+
+<h1>{{ ist.brand }}</h1>
+<h2>{{ ist.size }}</h2>
+<img src = "{{ ist.image }}">
+
+<p><form method='POST' action='/ists/{{ ist._id }}/delete'>
+    <button type='submit'>Delete</button>
+</form></p>
+{% endblock %}
+
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/bracelets'>
+    <fieldset>
+    <legend>New Bracelet</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='brand'>brand</label><br>
+        <input type='text' name='brand' />
+    </p>
+    <p>
+        <label for='size'>size</label><br>
+        <input type='text' name='size' />
+    </p>
+    <p>
+        <label for='image'>image</label><br>
+        <input type='text' name='image' />
+    </p>
+    <p>
+        <label for='price'>price</label><br>
+        <input type='text' name='price' />
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Bracelet</button>
+    </p>
+</form>
+{% endblock %}

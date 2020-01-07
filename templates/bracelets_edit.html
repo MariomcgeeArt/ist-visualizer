@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/ists/{{ ist._id }}'>
+    <fieldset>
+    <legend>New Client</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='brand'>name</label><br>
+        <input type="text" name="name" value="{{ ist.name }}"/>
+    </p>
+    <p>
+        <label for='size'>size</label><br>
+        <input type='text' name='size' value="{{ ist.size }}"/>
+    </p>
+    <p>
+        <label for='image'>image</label><br>
+        <input type='text' name='image' value="{{ ist.image }}"/>
+    </p>
+    <p>
+        <label for='price'>date</label><br>
+        <input type='text' name='date' value="{{ ist.date }}"/>
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save ist</button>
+    </p>
+</form>
+{% endblock %}
