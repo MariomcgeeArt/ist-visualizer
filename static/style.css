@@ -1,0 +1,27 @@
+body {
+    background-image: url("ISTMAZE.gif");
+    background-repeat: no-repeat;
+    /* background-position: 0% 50%; */
+    background-attachment: fixed;
+    background-position: center;    
+    /* background-color: #cccccc; */
+
+   }
+
+
+.bg-black {
+
+    background-color: black;
+   }
+.icon-size{
+
+    width: 8%;
+    height: 8%;
+}
+
+
+.main-body {
+    /* min-height: 100vh;
+    position: relative; */
+    height: 524px;
+}

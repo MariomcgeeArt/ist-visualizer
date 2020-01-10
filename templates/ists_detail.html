@@ -2,15 +2,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<a href="/ists/{{ ist._id }}/edit">Edit ist Details</a>
+<a href="/ists/{{ ist._id }}/edit">Edit ist Details</a><br>
+<a href="/ists/{{ ist._id }}/session">Add New Session</a>
 
-<h1>{{ ist.brand }}</h1>
-<h2>{{ ist.size }}</h2>
+
+
+
+
+<h1>{{ ist.name }}</h1>
+<h2>{{ ist.age }}</h2>
+<h3>{{ ist.date }}</h3>
 <img src = "{{ ist.image }}">
+{% for session in all_sessions %}
+    <div>
+        <h4>{{session.title}}</h4>
+        <h5>{{session.date}}</h5>
+        <p>{{session.content}}</p>
+    </div>
+{% endfor %}
 
 <p><form method='POST' action='/ists/{{ ist._id }}/delete'>
     <button type='submit'>Delete</button>
 </form></p>
+<br />
+<br />
+<br />
+<br />
+<br />
 {% endblock %}
 
 

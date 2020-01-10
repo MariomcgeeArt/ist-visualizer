@@ -1,31 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method='POST' action='/update/{{ ist._id }}'>
+<form method='POST' action='/ists'>
     <fieldset>
-    <legend>New Client</legend>
+    <legend>New Meeting</legend>
     <!-- TITLE -->
     <p>
         <label for='name'>name</label><br>
-        <input type="text" name="name" value="{{ ist.name }}"/>
+        <input type='text' name='name' />
     </p>
     <p>
         <label for='age'>age</label><br>
-        <input type='text' name='age' value="{{ ist.age }}"/>
+        <input type='text' name='age' />
     </p>
     <p>
         <label for='image'>image</label><br>
-        <input type='text' name='image' value="{{ ist.image }}"/>
+        <input type='text' name='image' />
     </p>
     <p>
         <label for='date'>date</label><br>
-        <input type='text' name='date' value="{{ ist.date }}"/>
+        <input type='text' name='date' />
     </p>
     </fieldset>
 
     <!-- BUTTON -->
     <p>
-        <button type='submit'>Save update</button>
+        <button type='submit'>Save Client</button>
     </p>
 </form>
 {% endblock %}

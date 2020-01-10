@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>ists</h1>
+<h1>IST VISUALIZER</h1>
 
-    <a href='/ists/new'>New ist</a>
-  
-    {% for ist in ists %}
-        <h2>{{ ist.brand }}</h2>
-        <small>{{ ist.size }}</small>
-        <small><img src = "{{ ist.image }}" height ="150" width= "150"></small>
-        <a href="/ists/{{ ist._id }}">View ist Details</a>
-    {% endfor %}
+<a href='/ists/new'>New Client</a><br>
+
+
+{% for ist in ists %}
+<h2>{{ ist.name }}</h2>
+<small>{{ ist.age}}</small>
+<small><img src="{{ ist.image }}" height="150" width="150"></small>
+<a href="/detail/{{ ist._id }}">View ist Details</a>
+{% endfor %}
 {% endblock %}
